@@ -43,7 +43,7 @@ def run():
                         name += part.capitalize()
                     else:
                         name = part.capitalize() + name
-                player_name = ''.join([' ' + x if x.isupper()else x for x in name]).lstrip()
+                player_name = ''.join([' ' + x if x.isupper() else x for x in name]).lstrip()
                 if '-' in player_name:
                     player_name = format_name(player_name)
             else:
