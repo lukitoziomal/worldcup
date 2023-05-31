@@ -9,5 +9,5 @@ router.register('players', PlayersView, basename='all-players')
 
 app_name = 'teams'
 urlpatterns = [
-    path('', include(router.urls))
+
 ]

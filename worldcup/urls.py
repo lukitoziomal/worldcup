@@ -15,8 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework import routers
+from teams.urls import router as teams_router
+from matches.urls import router as matches_router
+
+
+router = routers.DefaultRouter()
+router.registry.extend(teams_router.registry)
+router.registry.extend(matches_router.registry)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('teams.urls'))
+    path('api/', include(router.urls)),
+    path('matches/', include('matches.urls'))
 ]

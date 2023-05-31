@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Matches{% endblock %}
+{% block content %}
+
+    {% for match in matches %}
+        {{match.home_team}} - {{match.away_team}} <br />
+    {% endfor %}
+
+{% endblock %}

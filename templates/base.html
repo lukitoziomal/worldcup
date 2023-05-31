@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<a href="{% url 'matches:matches' %}">matches</a>
+ | teams | players | ladder | stats
+<br />
+<br />
+{% block content %}
+{% endblock %}
+</body>
+</html>
